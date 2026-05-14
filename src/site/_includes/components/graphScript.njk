@@ -19,7 +19,7 @@ function filterFullGraphData(graphData) {
     const hiddens = Object.values(graphData.nodes).filter(n => n.hide).map(n => n.id);
     return {
         links: graphData.links.filter(l => hiddens.indexOf(l.source) === -1 && hiddens.indexOf(l.target) === -1),
-        nodes: Object.values(graphData.nodes).filter(n => !n.hide),
+        nodes: Object.values(graphData.nodes).filter(n => !n.home),
     };
 }
 
