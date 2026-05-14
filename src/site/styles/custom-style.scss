@@ -1,13 +1,146 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+    /* =========================
+       BASE DARK NOIR PALETTE
+       ========================= */
+
+    background-color: #0b0d10;
+    color: #d6d6d6;
+
+    /* основной текст */
+    .content {
+        font-size: 14px;
+        line-height: 1.65;
+        color: #d6d6d6;
+        letter-spacing: 0.2px;
+    }
+
+    /* =========================
+       TYPOGRAPHY
+       ========================= */
+
+    h1 {
+        color: #c1121f; /* тёмно-кровавый */
+        text-shadow: 0 0 8px rgba(193, 18, 31, 0.25);
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        color: #7f1d1d; /* ржаво-красный */
+    }
+
+    h3 {
+        color: #2a9d8f; /* болотный зелёный */
+    }
+
+    h4 {
+        color: #8d99ae; /* холодный серо-голубой */
+    }
+
+    p {
+        color: #cfcfcf;
+    }
+
+    a {
+        color: #2a9d8f;
+        text-decoration: none;
+
+        &:hover {
+            color: #c1121f;
+            text-shadow: 0 0 6px rgba(193, 18, 31, 0.3);
+        }
+    }
+
+    /* =========================
+       BACKGROUND / PAPER FEEL
+       ========================= */
+
+    .theme-dark {
+        background: radial-gradient(
+            ellipse at top,
+            #11151c 0%,
+            #0b0d10 60%,
+            #050608 100%
+        );
+    }
+
+    /* =========================
+       BLOCKQUOTE — “CASE FILE”
+       ========================= */
+
+    blockquote {
+        background: rgba(42, 157, 143, 0.08);
+        border-left: 3px solid #2a9d8f;
+        padding: 0.8em 1em;
+        color: #bfcfcf;
+        font-style: italic;
+    }
+
+    /* =========================
+       CODE — “ARCHIVE FRAGMENT”
+       ========================= */
+
+    p > code {
+        background-color: #111827;
+        color: #c1121f;
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid rgba(193, 18, 31, 0.2);
+    }
+
+    /* =========================
+       CARDS / UI ELEMENTS
+       ========================= */
+
+    .obsidian-base-card {
+        background: #0f131a;
+        border: 1px solid rgba(42, 157, 143, 0.15);
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: rgba(193, 18, 31, 0.4);
+            box-shadow: 0 0 20px rgba(193, 18, 31, 0.08);
+        }
+    }
+
+    /* =========================
+       TABLES — “EVIDENCE GRID”
+       ========================= */
+
+    table {
+        background: #0d1117;
+        color: #d6d6d6;
+    }
+
+    th {
+        background: #111827;
+        color: #c1121f;
+    }
+
+    td {
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .filetree-wrapper {
+        background: #0d1117;
+    }
+
+    /* =========================
+       GRAPH FEEL (important for you)
+       ========================= */
+
+    #link-graph {
+        filter: contrast(1.1) saturate(0.8);
+    }
+
+    --dg-graph-bg: #07070a;
+    --dg-graph-border-color: #1a1a1f;
+
+    /* узлы (точки) */
+    --dg-graph-node-color: #d8f3dc;
+    --dg-graph-node-color-muted: #4a5a50;
+
+    --dg-graph-label-color: #abb389;
+
+    --background-primary: #050508;
+    --background-secondary: #0b0b10;
 }
