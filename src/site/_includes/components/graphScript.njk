@@ -17,14 +17,9 @@ function filterFullGraphData(graphData) {
     if (!graphData) return null;
     graphData = JSON.parse(JSON.stringify(graphData));
     const hiddens = Object.values(graphData.nodes).filter(n => n.hide).map(n => n.id);
-    Object.values(graphData.nodes).forEach(n => {
-        console.log(n);
-        console.log(n.hide);
-        console.log(n.home);
-    });
     return {
         links: graphData.links.filter(l => hiddens.indexOf(l.source) === -1 && hiddens.indexOf(l.target) === -1),
-        nodes: Object.values(graphData.nodes).filter(n => !n.home),
+        nodes: Object.values(graphData.nodes).filter(n => !n.hide),
     };
 }
 
